@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap');
+
+.portalContainer {
+  padding: 2rem;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+.portalContainer h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #0f0f0f;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.searchContainer {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer input {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchContainer input:focus {
+  border-color: #8ec5fc;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.searchContainer button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #8ec5fc, #e0c3fc);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchContainer button:hover {
+  background: linear-gradient(45deg, #5cb3f5, #c4c1fc);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.tableContainer {
+  margin-bottom: 2rem;
+  max-width: 100%;
+  overflow-x: auto; 
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+table th, table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+table th {
+  background-color: #8ec5fc;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table tr:hover th, table tr:hover td {
+  background-color: #e0e0e0;
+}
+.chartContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chartContainer:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.chartContainer h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.chartContainer canvas {
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .portalContainer {
+    padding: 1rem;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchContainer input, .searchContainer button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  table th, table td {
+    padding: 0.5rem;
+  }
+
+  .chartContainer {
+    padding: 1rem;
+  }
+}
